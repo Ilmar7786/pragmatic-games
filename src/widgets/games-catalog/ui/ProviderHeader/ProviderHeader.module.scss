@@ -1,0 +1,13 @@
+.heading {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+}
+
+.icon {
+  display: flex;
+  color: #c0392b;
+}

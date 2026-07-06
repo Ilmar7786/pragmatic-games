@@ -1,0 +1,41 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  justify-content: space-between;
+
+  padding: var(--space-4) var(--layout-padding-x);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--layout-padding-x) var(--space-8);
+}
+
+.substrate {
+  display: flex;
+  align-items: center;
+
+  padding: 9px 20px;
+  border-radius: var(--radius-lg);
+
+  background-color: var(--color-surface-2);
+}
+
+.typeSelect {
+  width: 100%;
+}
+
+@media (width <= 720px) {
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

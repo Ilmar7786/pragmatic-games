@@ -1,0 +1,94 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.control {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  background-color: var(--color-surface);
+
+  transition: border-color var(--transition-fast);
+
+  &:focus-within {
+    border-color: var(--color-accent);
+  }
+}
+
+.controlAccent {
+  border-color: var(--color-accent);
+}
+
+.controlError {
+  border-color: var(--color-danger);
+
+  &:focus-within {
+    border-color: var(--color-danger);
+  }
+}
+
+.icon {
+  display: flex;
+  color: var(--color-text-subtle);
+}
+
+.input {
+  flex: 1;
+
+  min-width: 0;
+  height: 40px;
+  border: none;
+
+  color: var(--color-text);
+
+  background: none;
+
+  &::placeholder {
+    color: var(--color-text-subtle);
+  }
+
+  // The custom `.clear` button replaces the native one — avoid showing both.
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    appearance: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  color: var(--color-text-muted);
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-surface-hover);
+  }
+}

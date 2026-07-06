@@ -1,0 +1,12 @@
+.grid {
+  position: relative;
+  width: 100%;
+}
+
+.cell {
+  // width/height/transform are set inline by the virtualizer.
+  will-change: transform;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
